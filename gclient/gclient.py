@@ -3193,6 +3193,10 @@ def main(argv):
   return 0
 
 
+def cli():
+  return main(sys.argv[1:])
+
+
 if '__main__' == __name__:
   with metrics.collector.print_notice_and_exit():
     sys.exit(main(sys.argv[1:]))
