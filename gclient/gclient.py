@@ -238,11 +238,6 @@ class Hook(object):
 
     cmd = [arg for arg in self._action]
 
-    if cmd[0] == 'python':
-      cmd[0] = 'vpython'
-    if cmd[0] == 'vpython' and _detect_host_os() == 'win':
-      cmd[0] += '.bat'
-
     try:
       start_time = time.time()
       gclient_utils.CheckCallAndFilter(

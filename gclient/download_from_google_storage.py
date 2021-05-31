@@ -76,8 +76,7 @@ class Gsutil(object):
   MAX_TRIES = 5
   RETRY_BASE_DELAY = 5.0
   RETRY_DELAY_MULTIPLE = 1.3
-  VPYTHON3 = ('vpython3.bat'
-              if GetNormalizedPlatform() == 'win32' else 'vpython3')
+  VPYTHON3 = ('python3')
 
   def __init__(self, path, boto_path=None, version='4.28'):
     if not os.path.exists(path):

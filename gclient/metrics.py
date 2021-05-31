@@ -203,7 +203,7 @@ class MetricsCollector(object):
 
   def _upload_metrics_data(self):
     """Upload the metrics data to the AppEngine app."""
-    p = subprocess2.Popen(['vpython3', UPLOAD_SCRIPT], stdin=subprocess2.PIPE)
+    p = subprocess2.Popen(['python3', UPLOAD_SCRIPT], stdin=subprocess2.PIPE)
     # We invoke a subprocess, and use stdin.write instead of communicate(),
     # so that we are able to return immediately, leaving the upload running in
     # the background.
