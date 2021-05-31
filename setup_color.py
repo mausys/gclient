@@ -10,7 +10,7 @@ import os
 import platform
 import subprocess
 import sys
-from third_party import colorama
+import colorama
 
 IS_TTY = None
 OUT_TYPE = 'unknown'

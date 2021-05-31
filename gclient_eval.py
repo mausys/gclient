@@ -10,18 +10,12 @@ import tokenize
 
 import gclient_utils
 
-from third_party import schema
-from third_party import six
+import schema
 
-if six.PY2:
-  # We use cStringIO.StringIO because it is equivalent to Py3's io.StringIO.
-  from cStringIO import StringIO
-  import collections as collections_abc
-else:
-  from collections import abc as collections_abc
-  from io import StringIO
-  # pylint: disable=redefined-builtin
-  basestring = str
+from collections import abc as collections_abc
+from io import StringIO
+# pylint: disable=redefined-builtin
+basestring = str
 
 
 class ConstantString(object):

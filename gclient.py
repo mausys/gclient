@@ -111,17 +111,15 @@ import gclient_utils
 import git_cache
 import metrics
 import metrics_utils
-from third_party.repo.progress import Progress
+from repo.progress import Progress
 import subcommand
 import subprocess2
 import setup_color
 
-from third_party import six
 
 # TODO(crbug.com/953884): Remove this when python3 migration is done.
-if six.PY3:
-  # pylint: disable=redefined-builtin
-  basestring = str
+# pylint: disable=redefined-builtin
+basestring = str
 
 
 DEPOT_TOOLS_DIR = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
